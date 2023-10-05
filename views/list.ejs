@@ -1,0 +1,55 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do_List</title>
+</head>
+<body>
+    <h1>Today is <%=kindofday%></h1>  -->
+    <!-- whatever we write in place of kindofday will change as it is a varible.  -->
+    <!-- <form action="/" method="post">
+        <input type="text" placeholder="Day" name="newitem1"> -->
+        <!-- <input type="text" placeholder="Day" name="newitem2">
+        <input type="text" placeholder="Day" name="newitem3"> -->
+        <!-- <button type="submit" name="button">Give the Date</button>
+    </form>
+    <ul>
+       <%for(var i=0;i<newitems.length;i++){%>
+        <li><%=newitems[i]%></li>
+      <% } %>
+    </ul>
+</body>
+</html> -->
+<%- include('header') -%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="css/styles.css">
+    <title>My Tasks</title>
+</head>
+<body>
+    <h1 id="heading" class="box"> <%=kindofday%></h1>
+    <h2 style="color:aliceblue" id="heading" class="box" >My Tasks</h2>
+   
+        <div class="box">
+    
+      
+         <% for(var i=0;i<newitems.length;i++) { %>
+            <div class="item">
+                <input type="checkbox">
+            <p><%=newitems[i]%></p> </div>
+        <% }%>
+   
+    <form action="/" method="post"> 
+        <input type="text" name="newitem" placeholder="new Item" autocomplete="off">
+        <button type="submit">+</button>
+        </form>
+        </div>
+</body>
+</html>
